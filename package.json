@@ -12,8 +12,7 @@
     }
   },
   "scripts": {
-    "prepare": "husky install",
-    "dummy": "nodemon --watch './**/*.ts' --exec ts-node -r tsconfig-paths/register ./simulations/sample/index.ts"
+    "up": "nodemon --watch './**/*.ts' --exec ts-node -r tsconfig-paths/register ./simulations/sample/index.ts"
   },
   "dependencies": {
     "crypto": "^1.0.1",
