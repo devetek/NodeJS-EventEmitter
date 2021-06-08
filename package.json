@@ -1,14 +1,4 @@
 {
-  "dependencies": {
-    "crypto": "^1.0.1",
-    "debug": "^4.1.1",
-    "fastify": "^2.14.1",
-    "ts-node": "^8.10.1",
-    "typescript": "^3.8.3"
-  },
-  "scripts": {
-    "dummy": "nodemon --watch './**/*.ts' --exec ts-node -r tsconfig-paths/register ./simulations/sample/index.ts"
-  },
   "name": "terqueue",
   "version": "1.0.0",
   "description": "Simple event emitter task manager",
@@ -16,9 +6,31 @@
   "repository": "https://github.com/devetek/NodeJS-EventEmitter.git",
   "author": "Prakasa <prakasa@devetek.com>",
   "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "dummy": "nodemon --watch './**/*.ts' --exec ts-node -r tsconfig-paths/register ./simulations/sample/index.ts"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "debug": "^4.1.1",
+    "fastify": "^2.14.1",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.8.3"
+  },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@types/node": "^13.13.5",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0",
+    "husky": "^6.0.0",
     "nodemon": "^2.0.3",
+    "pinst": "^2.1.6",
     "tsconfig-paths": "^3.9.0"
   }
 }
